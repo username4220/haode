@@ -1,0 +1,55 @@
+body{
+    height: 560px;
+    background: url('../img/bgc.jpg');
+    background-size: cover;
+    background-position: left bottom;
+}
+section{
+    position: absolute;
+    cursor: pointer;
+}
+section:nth-child(1){
+    width: 341px;height: 500px;
+    background: url(../img/fu.png);
+    left: 100px; top: 40px;
+    transform: rotate(15deg);
+    transform-origin: 34px 463px;
+    transition: .6s ease-in;
+}
+section:nth-child(2){
+    width: 260px;height: 260px;
+    background: url(../img/miao.png);
+    left: 480px;top: 280px;
+    transition: .2s ease-out .4s;
+}
+section:nth-child(3){
+    width: 180px;height: 120px;
+    background-color: #fe9031;
+    border-radius: 50%;
+    font: 36px "droid sans";
+    color: #fff;
+    padding: 40px;
+    left: 680px;top: 100px;
+    transition: .3s ease-out .6s;
+    opacity: 0;
+}
+section:nth-child(3)::after{
+    content: "";
+    display: block;
+    border-width: 30px 15px 0px 15px;
+    border-style: solid;
+    border-color: #fe9031 transparent transparent transparent;
+    position: absolute;
+    left: 80px;height: 192px;
+    transform: rotate(22deg);
+}
+section:nth-child(1):active{
+    transform: rotate(42deg);
+}
+section:nth-child(1):active + section{
+    transform: matrix(0.6,0.2,0,0.6,80,60);
+}
+section:nth-child(1):active ~ section:nth-child(3){
+    opacity: 1;
+    transform: matrix(1,0.3,0,1,-50,90);
+}

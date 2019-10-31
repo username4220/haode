@@ -1,0 +1,56 @@
+section{
+    width: 200px;height: 200px;
+    transition: 9s;
+    background-color: #e80000;
+    border: 20px solid #131313;
+    margin-right: 20px;
+    float: left;
+}
+section:nth-child(1){
+    transition-property: background-color;
+    transition-duration:5s;
+}
+section:nth-child(1):hover{
+    background-color: #240808;
+}
+section:nth-child(2){
+    transition-property: border-color;
+    /* transition-duration: .5s; */
+}
+section:nth-child(2):hover{
+    border-color: #7ce9f7;
+}
+section:nth-child(3){
+    transition-property: border-radius,border-colro;
+    /* transition-duration: 1s; */
+}
+section:nth-child(3):hover{
+    border-radius: 50%;
+    border-color: #e800df;
+}
+section:nth-child(4){
+    transition-property: all;
+    /* transition-duration: 11s; */
+}
+section:nth-child(4):hover{
+    background-color: #e800df;
+    border-color: #fc0303;
+    border-radius: 50%;
+}
+.clear{
+    clear: both;
+}
+.ctrl{
+    width: 32px;height: 32px;
+    background-color: #1747c9;
+    border-radius: 50%;
+}
+.handle{
+    width: 14px;height: 220px;
+    background: url(../img/bang.png) no-repeat;
+    margin-left: 60px;
+    transition: 1.2s ease-out;
+}
+.ctrl:hover+ .handle{
+    transform: translate(500px,100px) rotate(720deg) scale(.3);
+}
